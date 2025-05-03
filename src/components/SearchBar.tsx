@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { setCity } from "../store/weatherSlice";
 import { useGetWeatherByCityQuery } from "../store/weatherApi";
+import searchLogo from "../../public/search.png";
 
 const SearchBar = () => {
     const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const SearchBar = () => {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="px-4 py-2 border rounded text-black dark:text-white"
+                    className="px-6 py-2 border rounded text-black dark:text-white"
                     placeholder="Enter city name"
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
@@ -39,9 +40,9 @@ const SearchBar = () => {
                 />
                 <button
                     onClick={handleSearch}
-                    className="px-4 py-2 bg-blue-600 text-white rounded"
+                    className="px-4 py-2 border border-black dark:border-white dark:bg-white rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-200"
                 >
-                    Search
+                    <img src={searchLogo} alt="searchLogo" className="w-6 h-6" />   
                 </button>
             </div>
             <div className="mt-0.5">

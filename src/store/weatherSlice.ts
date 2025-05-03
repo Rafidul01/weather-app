@@ -6,8 +6,8 @@ interface WeatherState {
 }
 
 const initialState: WeatherState = {
-  city: "Dhaka", // default city
-  searchHistory: ["Dhaka"],
+  city: "Dhaka",
+  searchHistory: [],
 };
 
 const weatherSlice = createSlice({

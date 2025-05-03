@@ -44,13 +44,13 @@ const SearchBar = () => {
                     Search
                 </button>
             </div>
-            <div className="mt-4">
-                <h3 className="text-sm text-gray-400 mb-1">Recent Searches:</h3>
-                <ul className="flex gap-2 flex-wrap text-sm text-gray-200">
+            <div className="mt-0.5">
+                <h3 className="text-sm text-gray-400 mb-1 text-center">Recent Searches:</h3>
+                <ul className="flex gap-2 flex-wrap text-sm text-gray-200 ">
                     {history.map((h, i) => (
                         <li
                             key={i}
-                            className="bg-gray-700 px-3 py-1 rounded cursor-pointer hover:bg-gray-600"
+                            className="bg-gray-600 px-3 py-1 rounded cursor-pointer hover:bg-gray-500"
                             onClick={() => {
                                 dispatch(setCity(h));
                                 setInput(h); 

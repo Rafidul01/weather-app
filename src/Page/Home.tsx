@@ -5,6 +5,7 @@ import WeatherCard from "../components/WeatherCard";
 const Home = () => {
     return (
         <div>
+            
             <SearchBar />
             <WeatherCard/>
         </div>

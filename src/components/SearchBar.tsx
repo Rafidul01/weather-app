@@ -10,7 +10,7 @@ const SearchBar = () => {
     const history = useSelector((state: RootState) => state.weather.searchHistory);
     const [input, setInput] = useState(city);
 
-    const { data, error, isLoading } = useGetWeatherByCityQuery(city);
+    const { data } = useGetWeatherByCityQuery(city);
 
     const handleSearch = () => {
         if (input.trim()) {
@@ -18,8 +18,7 @@ const SearchBar = () => {
         }
     };
 
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error fetching weather data</div>;
+    
 
     console.log("Weather Data:", data);
 
@@ -32,6 +31,11 @@ const SearchBar = () => {
                     onChange={(e) => setInput(e.target.value)}
                     className="px-4 py-2 border rounded text-black"
                     placeholder="Enter city name"
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            handleSearch();
+                        }
+                    }}
                 />
                 <button
                     onClick={handleSearch}
@@ -47,7 +51,10 @@ const SearchBar = () => {
                         <li
                             key={i}
                             className="bg-gray-700 px-3 py-1 rounded cursor-pointer hover:bg-gray-600"
-                            onClick={() => dispatch(setCity(h))}
+                            onClick={() => {
+                                dispatch(setCity(h));
+                                setInput(h); 
+                            }}
                         >
                             {h}
                         </li>

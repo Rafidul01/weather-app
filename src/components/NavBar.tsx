@@ -19,7 +19,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="flex justify-between items-center bg-gray-200 dark:bg-gray-800 p-4 text-black dark:text-white">
+        <div className="flex justify-between items-center p-4 text-black dark:text-white border-b border-black dark:border-white ">
             <h1 className="text-2xl font-bold">Weather App</h1>
             <button
                 onClick={toggleTheme}

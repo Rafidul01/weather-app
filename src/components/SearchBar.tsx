@@ -29,7 +29,7 @@ const SearchBar = () => {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="px-4 py-2 border rounded text-black"
+                    className="px-4 py-2 border rounded text-black dark:text-white"
                     placeholder="Enter city name"
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
@@ -45,8 +45,8 @@ const SearchBar = () => {
                 </button>
             </div>
             <div className="mt-0.5">
-                <h3 className="text-sm text-gray-400 mb-1 text-center">Recent Searches:</h3>
-                <ul className="flex gap-2 flex-wrap text-sm text-gray-200 ">
+                <h3 className="text-sm dark:text-gray-400 mb-1 text-center font-bold">Recent Searched:</h3>
+                <ul className="flex gap-2 flex-wrap text-sm text-gray-200 justify-center item-center max-w-[300px] ">
                     {history.map((h, i) => (
                         <li
                             key={i}

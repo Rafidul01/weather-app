@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import darkLogo from "../../public/darkLogo.png";
 import lightLogo from "../../public/lightLogo.svg";
+import watherLogo from "../../public/weather.png";
 const NavBar = () => {
     const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -21,7 +22,7 @@ const NavBar = () => {
 
     return (
         <div className="bg-white/30 backdrop-blur-sm flex justify-between items-center p-4 text-black dark:text-white border-b border-black dark:border-white rounded-md ">
-            <h1 className="text-2xl font-bold">Weather App</h1>
+            <h1 className="text-2xl font-bold flex gap-2 items-center justify-center"><img className="w-8 h-8" src={watherLogo} alt="" />Weather App</h1>
             <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md"

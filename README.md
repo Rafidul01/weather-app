@@ -34,7 +34,7 @@ A responsive weather search application built with **React**, **Redux Toolkit**,
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/weather-search-app.git
+git clone https://github.com/Rafidul01/weather-app.git
 cd weather-search-app
 npm install
 npm run dev

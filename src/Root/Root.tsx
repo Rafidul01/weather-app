@@ -16,7 +16,9 @@ const Root = () => {
       
       <div className="relative z-10">
         <NavBar />
-        <Outlet />
+        <div className="min-h-[calc(100vh-250px)]">
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </div>

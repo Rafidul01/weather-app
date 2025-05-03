@@ -45,6 +45,8 @@ const SearchBar = () => {
                     <img src={searchLogo} alt="searchLogo" className="w-6 h-6" />   
                 </button>
             </div>
+
+            {/* Recent Searched Cities */}
             <div className="mt-0.5">
                 <h3 className="text-sm dark:text-gray-400 mb-1 text-center font-bold">Recent Searched:</h3>
                 <ul className="flex gap-2 flex-wrap text-sm text-gray-200 justify-center item-center max-w-[300px] ">

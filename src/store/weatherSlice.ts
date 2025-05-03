@@ -6,7 +6,7 @@ interface WeatherState {
 }
 
 const initialState: WeatherState = {
-  city: "Dhaka",
+  city: "Chittagong",
   searchHistory: [],
 };
 
@@ -21,6 +21,9 @@ const weatherSlice = createSlice({
       
       if (!state.searchHistory.includes(newCity)) {
         state.searchHistory.unshift(newCity);
+        if (state.searchHistory.length > 5) {
+          state.searchHistory.pop();
+        }
 
       }
     },

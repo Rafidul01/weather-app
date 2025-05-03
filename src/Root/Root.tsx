@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import bgImage from "../../public/bgImg.jpg";
+import Footer from "../components/Footer";
 
 const Root = () => {
   return (
@@ -16,6 +17,7 @@ const Root = () => {
       <div className="relative z-10">
         <NavBar />
         <Outlet />
+        <Footer />
       </div>
     </div>
   );

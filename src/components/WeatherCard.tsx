@@ -23,7 +23,7 @@ const WeatherCard = () => {
         <h2 className="text-2xl font-bold dark:text-gray-400">{data?.name}</h2>
         <img
           className="mx-auto w-[90px] rounded-full dark:bg-gray-500 bg-blue-200 mt-4"
-          src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${weather?.icon}@2x.png`}
           alt={weather?.description}
         />
         <p className="text-xl mt-4 dark:text-gray-400">{weather?.main} ({weather?.description})</p>

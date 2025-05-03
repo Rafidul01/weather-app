@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import darkLogo from "../../public/darkLogo.png";
+import lightLogo from "../../public/lightLogo.svg";
 const NavBar = () => {
     const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -23,9 +24,9 @@ const NavBar = () => {
             <h1 className="text-2xl font-bold">Weather App</h1>
             <button
                 onClick={toggleTheme}
-                className="px-4 py-2 rounded bg-blue-500 text-white"
+                className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md"
             >
-                {theme === "light" ? "Switch to Dark" : "Switch to Light"}
+                {theme === "dark" ? <img src={lightLogo} alt="darkLogo" className="w-6 h-6" /> : <img src={darkLogo} alt="darkLogo" className="w-6 h-6" />}
             </button>
         </div>
     );
